@@ -39,6 +39,7 @@ connected = False
 
 with head:
 	title = st.title("Screen recorder app")
+	ip_adress= socket.gethostname()
 	
 
 with section_1:
