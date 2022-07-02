@@ -1,0 +1,8 @@
+boto3==1.21.37
+mss==6.1.0
+numpy==1.22.3
+opencv_python==4.5.5.64
+Pillow==9.2.0
+progressbar33==2.4
+pywin32==303
+streamlit==1.8.1
