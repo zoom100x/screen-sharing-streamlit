@@ -2,7 +2,7 @@ import streamlit as st
 
 from threading import Thread
 import base64
-#from win32api import GetSystemMetrics
+from win32api import GetSystemMetrics
 from zlib import compress
 import datetime
 
