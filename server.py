@@ -2,7 +2,7 @@ import streamlit as st
 
 from threading import Thread
 import base64
-from win32api import GetSystemMetrics
+#from win32api import GetSystemMetrics
 from zlib import compress
 import datetime
 
@@ -21,8 +21,8 @@ section_2 = st.container()
 #constants
 TOP = 0
 LEFT = 0
-WIDTH = GetSystemMetrics(0)
-HEIGHT = GetSystemMetrics(1)
+WIDTH = 1280
+HEIGHT = 720
 IP = socket.gethostbyname(socket.gethostname())
 PORT = 9090
 HEADER = 64
