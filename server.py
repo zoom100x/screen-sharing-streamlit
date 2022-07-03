@@ -30,10 +30,10 @@ FORMAT = 'utf-8'
 MSG_DISCONNECTED = '!DISCONNECTED'
 
 #Setting name to screenvideo
-time_d = datetime.datetime.now().strftime('%Y-%m-%d %H-%M-%S')
+"""time_d = datetime.datetime.now().strftime('%Y-%m-%d %H-%M-%S')
 file_name =f'{time_d}.mp4'
 path = f'./video/{file_name}'
-fourcc = cv2.VideoWriter_fourcc('m','p','4','v')
+fourcc = cv2.VideoWriter_fourcc('m','p','4','v')"""
 connected = False
 
 
@@ -44,12 +44,12 @@ with head:
 
 with section_1:
 	def retreive_screenshot(conn):
-		frame_rate = 10.0
-		captured_video = cv2.VideoWriter(path, fourcc, frame_rate, (WIDTH, HEIGHT))
+		"""frame_rate = 10.0
+		captured_video = cv2.VideoWriter(path, fourcc, frame_rate, (WIDTH, HEIGHT))"""
 		
 		with mss.mss() as sct:
 			# The region to capture
-			rect = {'top': TOP, 'left': LEFT, 'width': WIDTH, 'height': HEIGHT}
+			#rect = {'top': TOP, 'left': LEFT, 'width': WIDTH, 'height': HEIGHT}
 
 			connected = True
 
@@ -59,9 +59,9 @@ with section_1:
 
 				#saving the video
 				img_np = np.array(img)
-				frame = cv2.cvtColor(img_np, cv2.COLOR_RGB2BGR)
+				"""frame = cv2.cvtColor(img_np, cv2.COLOR_RGB2BGR)
 				frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-				captured_video.write(frame)
+				captured_video.write(frame)"""
 
 				
 				# Tweak the compression level here (0-9)
@@ -80,7 +80,7 @@ with section_1:
 				conn.sendall(pixels)
 
 		conn.close()
-		captured_video.release()
+		#captured_video.release()
 
 	def start_server_listening():
 		#initialize server
